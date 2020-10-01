@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.CrudFuncionarioController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <tabs>
+                  <Tab text="Home">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="45.0" prefHeight="38.0" prefWidth="157.0" text="Quantidade Itens:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="QuantidadeItens" layoutX="182.0" layoutY="51.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Incluir">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="39.0" text="Nome:" />
+                              <TextField fx:id="IncluirnomeFuncionario" layoutX="81.0" layoutY="35.0" />
+                              <Label layoutX="26.0" layoutY="95.0" text="DataNascimento:" />
+                              <DatePicker fx:id="IncluirdataFuncionario" layoutX="135.0" layoutY="91.0" />
+                              <TextField fx:id="IncluirsalarioFuncionario" layoutX="97.0" layoutY="151.0" />
+                              <Label layoutX="33.0" layoutY="155.0" text="Salario:" />
+                              <Button fx:id="IncluirButton" layoutX="246.0" layoutY="237.0" mnemonicParsing="false" onAction="#IncluirFuncionario" text="Incluir" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Pesquisar e Alterar">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="33.0" layoutY="155.0" text="Salario:" />
+                              <Label layoutX="26.0" layoutY="95.0" text="DataNascimento:" />
+                              <Label layoutX="26.0" layoutY="39.0" text="Nome:" />
+                              <TextField fx:id="AlterarnomeFuncionario" layoutX="81.0" layoutY="35.0" />
+                              <TextField fx:id="AlterarsalarioFuncionario" layoutX="97.0" layoutY="151.0" />
+                              <DatePicker fx:id="AlterardataFuncionario" layoutX="135.0" layoutY="91.0" />
+                              <Label layoutX="30.0" layoutY="210.0" text="ID:" />
+                              <TextField fx:id="AlteraridFuncionario" layoutX="72.0" layoutY="206.0" />
+                              <Button fx:id="PesquisarButton" layoutX="246.0" layoutY="258.0" mnemonicParsing="false" onAction="#PesquisarFuncionario" text="Pesquisar" />
+                              <Button fx:id="AlterarButton" layoutX="356.0" layoutY="258.0" mnemonicParsing="false" onAction="#AlterarFuncionario" text="Alterar" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Excluir">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="66.0" layoutY="55.0" text="ID:" />
+                              <TextField fx:id="ExcluiridFuncionario" layoutX="112.0" layoutY="51.0" />
+                              <Button fx:id="ExcluirButton" layoutX="321.0" layoutY="51.0" mnemonicParsing="false" onAction="#ExcluirFuncionario" text="Excluir" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
